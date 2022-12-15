@@ -88,7 +88,7 @@ anova(m0, m1, m2, m3)
 
 # Running a pairwise comparison among ratios
 library(multcomp)
-g1 <- glht(m3, linfct = mcp(ratio = "Tukey"))
+g1 <- glht(m0, linfct = mcp(ratio = "Tukey"))
 summary(g1)
 
 
