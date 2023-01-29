@@ -3,13 +3,15 @@ This repository includes the dataset and analysis code for the conditional conne
 
 
 ## Variable Names
-**subject:** id of the subject (1, ..., 14)
+**subject:** id of the subject (1, ..., 44)
 
-**list:** list the subject is assigned to (1,2 and 3)
+**list:** list the subject is assigned to (1, 2 and 3)
 
 **item:** id of the item (1, ..., 36)
 
 **index:** order of the item (1, ..., 36)
+
+**group:** group of the participant (adult or child)
 
 **connective:** type of connective (_if, if not_ or _unless_)
 
