@@ -105,7 +105,7 @@ library(emmeans)
 marginal <- emmeans(m0, ~ group + connective + ratio)
 pairs(marginal, adjust="tukey")
 
-# Visualize the comparions for better readibility
+# Visualize the comparisons for better readability
 p <- plot(marginal, ylab = "Variables", xlab = "Estimates with 95% CI", colors = "black", "black")
 p + theme_bw() + labs(title = "Estimated Marginal Means")
 
