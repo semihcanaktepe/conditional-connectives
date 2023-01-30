@@ -164,6 +164,6 @@ marginal <- emmeans(m, ~ condition + connective)
 pairs(marginal, adjust="tukey")
 
 # Visualize the comparisons for better readability
-p <- plot(marginal, ylab = "Variables", xlab = "Estimates with 95% CI", colors = "black", "black")
+p <- plot(marginal, ylab = "Variables", xlab = "Estimates with 95% CI", colors = c("black", "black"))
 p + theme_bw() + labs(title = "Estimated Marginal Means")
 
