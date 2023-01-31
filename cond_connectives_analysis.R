@@ -46,30 +46,31 @@ ad3 <- subset(ad, connective == "unless")
 # NEW PLOTS with ADULTS
 par(mfrow=c(1,3))
 #IF
-plot(ad1$ratio-0.025, ad1$response, type = "b", pch = 16, col= "red", xaxt='n',xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "If")
-arrows(ad1$ratio-0.025, ad1$Low, ad1$ratio-0.025, ad1$High, length=0.05, angle=90, code=3, col = "red")
-lines(ch1$ratio+0.025, ch1$response, type = "b", pch = 17, col = "blue")
-arrows(ch1$ratio+0.025, ch1$Low, ch1$ratio+0.025, ch1$High, length=0.05, angle=90, code=3, col = "blue")
+plot(ad1$ratio-0.025, ad1$response, type = "b", pch = 19, col= "red", xaxt='n', lwd=2, xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "If")
+arrows(ad1$ratio-0.025, ad1$Low, ad1$ratio-0.025, ad1$High, length=0.05, angle=90, code=3, col = "red", lwd=2)
+lines(ch1$ratio+0.025, ch1$response, type = "b", pch = 24, col = "blue", lwd=2)
+arrows(ch1$ratio+0.025, ch1$Low, ch1$ratio+0.025, ch1$High, length=0.05, angle=90, code=3, col = "blue", lwd=2)
 axis(1, at=c(1,2,3), labels=c("0.0", "0.4", "1.0"))
-legend(2.45, 0.1, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(16,17))
+legend(2.45, 0.09, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(19,24), lwd=2)
 
 #IF NOT
-plot(ad2$ratio-0.025, ad2$response, type = "b", pch = 16, col= "red", xaxt='n',xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "If Not")
-arrows(ad2$ratio-0.025, ad2$Low, ad2$ratio-0.025, ad2$High, length=0.05, angle=90, code=3, col = "red")
-lines(ch2$ratio+0.025, ch2$response, type = "b", pch = 17, col = "blue")
-arrows(ch2$ratio+0.025, ch2$Low, ch2$ratio+0.025, ch2$High, length=0.05, angle=90, code=3, col = "blue")
+plot(ad2$ratio-0.025, ad2$response, type = "b", pch = 19, col= "red", xaxt='n', lwd=2, xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "If Not")
+arrows(ad2$ratio-0.025, ad2$Low, ad2$ratio-0.025, ad2$High, length=0.05, angle=90, code=3, col = "red", lwd=2)
+lines(ch2$ratio+0.025, ch2$response, type = "b", pch = 24, col = "blue", lwd=2)
+arrows(ch2$ratio+0.025, ch2$Low, ch2$ratio+0.025, ch2$High, length=0.05, angle=90, code=3, col = "blue", lwd=2)
 axis(1, at=c(1,2,3), labels=c("0.0", "0.4", "1.0"))
-legend(2.45, 0.1, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(16,17))
+legend(2.45, 0.09, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(19,24), lwd=2)
 
 #UNLESS
-plot(ad3$ratio-0.025, ad3$response, type = "b", pch = 16, col= "red", xaxt='n',xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "Unless")
-arrows(ad3$ratio-0.025, ad3$Low, ad3$ratio-0.025, ad3$High, length=0.05, angle=90, code=3, col = "red")
-lines(ch3$ratio+0.025, ch3$response, type = "b", pch = 17, col = "blue")
-arrows(ch3$ratio+0.025, ch3$Low, ch3$ratio+0.025, ch3$High, length=0.05, angle=90, code=3, col = "blue")
+plot(ad3$ratio-0.025, ad3$response, type = "b", pch = 19, col= "red", xaxt='n', lwd=2, xlim = c(1,3), ylim = c(0,1), xlab = "Ratio", ylab = "Acceptance Rate", main = "Unless")
+arrows(ad3$ratio-0.025, ad3$Low, ad3$ratio-0.025, ad3$High, length=0.05, angle=90, code=3, col = "red", lwd=2)
+lines(ch3$ratio+0.025, ch3$response, type = "b", pch = 24, col = "blue", lwd=2)
+arrows(ch3$ratio+0.025, ch3$Low, ch3$ratio+0.025, ch3$High, length=0.05, angle=90, code=3, col = "blue", lwd=2)
 axis(1, at=c(1,2,3), labels=c("0.0", "0.4", "1.0"))
-legend(2.45, 0.1, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(16,17))
+legend(2.45, 0.09, legend=c("Adults", "Children"), col=c("red", "blue"), lty = 1, pch = c(19,24), lwd=2)
 
 mtext("Mean Acceptance Rates for Each Connective", side = 3, line = -1.25, outer = TRUE)
+
 
 # To clean the plots and reset gridding, use,
 dev.off()
