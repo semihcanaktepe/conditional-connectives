@@ -91,7 +91,7 @@ cond_connectives$ratio <- as.factor(cond_connectives$ratio)
 cond_connectives$group <- factor(cond_connectives$group, levels = c("child", "adult"))
 
 library(lme4)
-# This is the maximal random slope model. Does not converge. So we reduce it to a random intercept only model.
+# This is the maximal random slope model.
 m0 <- glmer(response ~ group*connective*ratio + (1 + group | subject) + (1 + connective | item),
             data = cond_connectives, family = binomial, nAGQ = 0)
 
