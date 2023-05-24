@@ -335,5 +335,4 @@ power_of_sim <- mixedpower(model = model1, data = simdat,
                           simvar = "subject", steps = c(30, 60),
                           critical_value = 2, SESOI = b)
 
-
-
+SessionInfo()
